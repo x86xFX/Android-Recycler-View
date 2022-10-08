@@ -18,7 +18,8 @@ class TodoAdapter(private var todos: List<Todo>): RecyclerView.Adapter<TodoAdapt
 
     override fun onBindViewHolder(holder: ToDoViewHolder, position: Int) {
         holder.binding.apply {
-            // tvTitle this now works
+            itemText.text = todos[position].title
+            itemCheck.isChecked = todos[position].isChecked
         }
     }
 
